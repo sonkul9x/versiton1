@@ -50,9 +50,9 @@
   'number_products_per_side' => '3',
   'editor' => '1',
   'slogan' => '',
-  'pay_bank' => '0',
-  'pay_people' => '0',
-  'pay_info' => '0',
+  'pay_bank' => 'Ngân hàng điện tử',
+  'pay_people' => 'tRẦN sƠN',
+  'pay_info' => '0ĐÙ INFO',
   'success_order' => '<p><strong>Ch&uacute;c mừng bạn đ&atilde; đặt h&agrave;ng th&agrave;nh c&ocirc;ng! Ch&uacute;ng t&ocirc;i sẽ li&ecirc;n lạc với bạn trong thời gian sớm nhất.</strong></p>
 <p><strong>Mời bạn&nbsp;<a title="Quay lại trang chủ" href="http://thanhxuanduoc.com/">Click v&agrave;o đ&acirc;y</a> để quay lại trang chủ.</strong></p>',
   'livechat' => '',

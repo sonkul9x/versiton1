@@ -58,15 +58,15 @@
                          <?php echo DocTienBangChu($this->cart->total()); ?>              
                         <?php } ?></td>
                       </tr>
-                      <tr>
+                     <!--  <tr>
                         <td><span class="extra">Mã giảm giá :</span></td>
                         <td><span><input type="text" class="text" name="coupon_code" > </span></td>
-                      </tr>
+                      </tr> -->
                       
                     </table>
-                    <a href="/san-pham" class="btn btn-primary one" title="Thêm sản phẩm">Thêm sản phẩm</a>
+                    <a href="/san-pham" class="btn btn-primary one" style=" background: #ccc none repeat scroll 0 0;border: medium none;border-radius: 2px;color: #fff;cursor: pointer;padding: 10px;" title="Thêm sản phẩm">Tiếp tục mua hàng</a>
                     <?php if ($this->cart->total_items() != 0){ ?>
-                        <a href="/thong-tin-khach-hang" class="btn btn-success one" title="Thanh toán">Thanh toán</a>
+                        <a href="/thong-tin-khach-hang" style=" background: #ccc none repeat scroll 0 0;border: medium none;border-radius: 2px;color: #fff;cursor: pointer;padding: 10px;" class="btn btn-success one" title="Thanh toán">Thanh toán</a>
                     <?php } ?>
                   </div><!--end:alltotal-->
                   </div><!--end:contentbox-->

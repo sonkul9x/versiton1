@@ -67,47 +67,51 @@ $(function() {
                 <?php }else{ ?>
             <span class="price"><?php echo $price; ?></span>
                          <?php    } ?>
-   
-        Chọn kích cỡ :&nbsp;
-        <select id="product_size" name="product_size">
+        
             <?php if(!empty($product->size)){ ?>
-            <div>
+            <div class="pro_size" style="font-size: 13px;padding: 10px 0;">
+        Chọn kích cỡ:
+
+        <select id="product_size" name="product_size" style="background: #fff none repeat scroll 0 0;color: #000;width: 50px;border-color: #ccc;">
+            
+
             <?php 
                 $size_arr = @explode(",", $product->size);
                 $size = modules::run('products/get_size',$size_arr);
                 foreach($size as $k => $v){            ?>               
-                <option value="<?php echo $v; ?>"><?php echo $v; ?></option>
+                <option  value="<?php echo $v; ?>"><?php echo $v; ?></option>
             <?php } ?>
-
+            </select>
+       
             </div>
             <?php } ?>  
-
-         </select>
-        
-            <?php // if(!empty($product->colors)){ ?>
-<!--            <div><label><?php // echo __('IP_color'); ?>: </label>
+          <div>
+            <span class="sizebox">1</span>
+          </div>
+            
+          
+            <?php  if(!empty($product->colors)){ ?>
+          <div style="font-size: 13px;padding: 10px 0;">
+          <label><?php  echo __('IP_color'); ?>: </label>
             <?php 
-//                $colors_arr = @explode(",", $product->colors);
-//                $colors = modules::run('products/get_colors',$colors_arr);
-//                foreach($colors as $k => $v){
+           $colors_arr = @explode(",", $product->colors);
+           $colors = modules::run('products/get_colors',$colors_arr);
+          foreach($colors as $k => $v){
             ?>
-                <span style="width:15px;height:15px;border:1px solid #000;background:#<?php // echo $k; ?>;cursor:pointer;margin-right:5px;display:inline-block;vertical-align:middle;" title="<?php // echo $v; ?>"></span>
-            <?php // } ?>
-            </div>    -->
-            <?php // } ?>
-
-
-
-
-
-
-
-         &nbsp;&nbsp;
-         Số lượng:&nbsp;
-         <input value="1" name="qty" type="text">                             
-
+                <span style="width:15px;height:15px;border:1px solid #000;background:#<?php echo $k; ?>;cursor:pointer;margin-right:5px;display:inline-block;vertical-align:middle;" title="<?php  echo $v; ?>"></span>
+            <?php  } ?>
+            </div>   
+            <?php  } ?>
+        <div class="pro_qty" style="font-size: 13px;padding: 10px 0;">
+         Số lượng: 
+         <input style="background: #fff none repeat scroll 0 0;color: #000;width: 50px;border:1px solid  #ccc;padding: 4px 5px;" value="1" name="qty" type="text">                             
+        </div>
       <?php if($product->price > 0){ ?>
-      <button type="button" class="addtocart" id="addtocart"><i class="fa fa-shopping-cart"></i>&nbsp;<?php echo __('IP_products_add_cart'); ?></button>
+      <button type="button" class="addtocart" id="addtocart" style=" background: #f5640c none repeat scroll 0 0;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 20px;
+    padding: 9px 65px;margin-bottom: 10px;"><i class="fa fa-shopping-cart" ></i>&nbsp;<?php echo __('IP_products_add_cart'); ?></button>
       <?php }else{ ?>
             <form method="post" action="<?php echo base_url().CONTACT_HOME_URL; ?>">
                 <input type="hidden" name="id" value="<?php echo $product->id; ?>" />
@@ -118,7 +122,7 @@ $(function() {
                 if(!empty($config)){
             ?>
             <div class="order_tel">
-                Hoặc gọi hotline <a href="tel:<?php echo $config['telephone'] ?>"><span><?php echo $config['telephone'] ?></span></a> <br />để mua hàng nhanh nhất
+                Hoặc gọi hotline <span style="color: #f00!important;font-size: 18px;font-weight: 600;"><?php echo $config['telephone'] ?></span> để mua hàng nhanh nhất
             </div>
             <?php } ?>
        <div id="tab">
@@ -149,5 +153,6 @@ $(function() {
         </div>
     </div>
   </div><!--prodetail-->
+
 
   <?php }else {echo '<h4 class="alert alert-info">' . __('IP_comming_soon') . '</h4>';} ?>

@@ -2,7 +2,7 @@
 
 <?php  echo $this->load->view('common/header'); ?>
     <div id="page_wrap">
-        <?php  echo $this->load->view('common/sk-top'); ?>
+        <?php //  echo $this->load->view('common/sk-top'); ?>
         <div id="container">
              <?php  echo $this->load->view('common/sk-top_nav'); ?>
             <div class="content-wrap">         

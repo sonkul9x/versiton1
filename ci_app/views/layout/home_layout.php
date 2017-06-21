@@ -1,6 +1,6 @@
 <?php  echo $this->load->view('common/header'); ?>
     <div id="page_wrap">
-        <?php  echo $this->load->view('common/sk-top'); ?>
+        <?php // echo $this->load->view('common/sk-top'); ?>
         <div id="container">
              <?php  echo $this->load->view('common/sk-top_nav'); ?>
             <div class="content-wrap">
@@ -25,26 +25,3 @@
             </div><!--end:content-wrap-->
 <?php echo $this->load->view('common/footer'); ?>
 
-<?php /* echo $this->load->view('common/header'); ?>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="main">
-                <?php echo $this->load->view('common/top'); ?>
-                <?php echo $this->load->view('common/top_nav'); ?>
-                <?php echo $this->load->view('common/home1'); ?>
-                <?php echo $this->load->view('common/home2'); ?>
-                <?php echo $this->load->view('common/home3'); ?>
-                <?php echo $this->load->view('common/home_ads'); ?>
-                <?php echo $this->load->view('common/home4'); ?>
-                <?php echo $this->load->view('common/home5'); ?>
-                <?php echo $this->load->view('common/home6'); ?>
-                <?php echo $this->load->view('common/home7'); ?>
-                <?php echo $this->load->view('common/footer'); ?>
-            </div>
-        </div>
-    </div>
-</div>
-</body>
-</html>
-*/ ?>
